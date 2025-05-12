@@ -1,0 +1,139 @@
+.page-container {
+  background-color: #cbd5e0;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border-radius: 50px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.page-subtitle p{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.file-input {
+  border: 1px solid #cbd5e0;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #4338ca;
+}
+
+.preview-section {
+  margin-top: 30px;
+}
+
+.preview-title {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.preview-image {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.loading-section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e0;
+  border-top: 2px solid #4f46e5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.result-section {
+  margin-top: 40px;
+}
+
+.result-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.detected-style {
+  color: #4f46e5;
+}
+
+.feedback-section {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.feedback-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedback-text {
+  font-size: 0.9rem;
+  color: #2d3748;
+  white-space: pre-line;
+}
+
+.feedback-loading {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-top: 20px;
+}

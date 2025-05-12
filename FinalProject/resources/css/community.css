@@ -1,0 +1,197 @@
+/* artwork.css */
+
+.page-container {
+    padding: 2.5rem 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  
+  .upload-button {
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .upload-button:hover {
+    background-color: #4338ca;
+  }
+  
+  .empty-text {
+    text-align: center;
+    color: #6b7280;
+    margin-top: 2.5rem;
+  }
+  
+  .upload-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+  }
+  
+  .upload-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .upload-info {
+    padding: 1.5rem;
+  }
+  
+  .upload-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .upload-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+  }
+  
+  .upload-meta {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+    transition: color 0.2s ease;
+  }
+  
+  .like-button:hover {
+    color: #ef4444;
+  }
+  
+  .like-icon-liked {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #ef4444;
+    transition: all 0.2s ease;
+  }
+  
+  .like-icon-unliked {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: none;
+    stroke: currentColor;
+    transition: all 0.2s ease;
+  }
+  
+  .upload-description {
+    color: #374151;
+    font-size: 0.875rem;
+  }
+  
+  .comment-section {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .comment-header {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.75rem;
+  }
+  
+  .comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #1f2937;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.25rem;
+  }
+  
+  .comment-user {
+    font-weight: 500;
+    color: #4f46e5;
+  }
+  
+  .comment-delete {
+    font-size: 0.75rem;
+    color: #ef4444;
+    cursor: pointer;
+  }
+  
+  .comment-delete:hover {
+    text-decoration: underline;
+  }
+  
+  .no-comments {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+  }
+  
+  .comment-input {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .comment-box {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    outline: none;
+  }
+  
+  .comment-box:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 1px #4f46e5;
+  }
+  
+  .comment-send {
+    color: #4f46e5;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .comment-send:hover {
+    text-decoration: underline;
+  }
+  
+  .login-message {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+
+  .login-message a{
+    font-size: 0.875rem;
+    color: #ff0000;
+    text-decoration: underline;
+  }
+  

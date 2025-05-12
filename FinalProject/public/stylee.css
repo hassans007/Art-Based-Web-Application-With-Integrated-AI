@@ -1,0 +1,585 @@
+/* ==== Base & Layout ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    background-color: #ffffff;
+    font-size: large;
+    margin: 0;
+    font-family: system-ui;
+}
+
+.catalogContent,
+.aboutContent,
+.savedContent,
+.uploadContent,
+.homeContent {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalogContent,
+.aboutContent,
+.savedContent {
+    color: white;
+}
+
+/* ==== Top Image Banner ==== */
+.homeTopImage {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.homeTopImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ==== Navigation ==== */
+.nav-control {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(190, 232, 237, 0.767);
+    backdrop-filter: blur(4px);
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo img {
+    width: 8vw;
+    height: auto;
+    margin-right: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    margin-right: 100px;
+}
+
+.nav-box a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-box a:hover {
+    color: rgb(115, 214, 122);
+    transition: color 0.3s ease;
+}
+
+/* ==== Search Bar ==== */
+.searchContainer {
+    display: flex;
+}
+
+.searchItem {
+    display: flex;
+    background-color: #ebebeb;
+    width: 100%;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+
+input.searchBar {
+    width: 100%;
+    font-size: x-large;
+    padding: 10px;
+    border: none;
+    background-color: #ebebeb;
+    outline: none;
+}
+
+.searchButton {
+    color: #aaa;
+    border: none;
+    font-size: x-large;
+    padding: 10px;
+    background-color: #ebebeb;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #e0e0e0;
+}
+
+.searchImg {
+    width: 40px;
+    height: auto;
+}
+
+#liveResults {
+    background: white;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    background: #fff;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+/* ==== Artist Detail ==== */
+.artistDetails {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.artistDTop {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.artistDTop a {
+    text-decoration: none;
+    color: #000;
+}
+
+.artistDTop a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.back {
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+
+.back img {
+    vertical-align: middle;
+}
+
+/* ==== Artwork Detail ==== */
+.artDetails {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.artDetails a {
+    text-decoration: none;
+    color: #000;
+}
+
+.artDetails a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* ==== Artwork catalog ==== */
+
+.artworkGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.artworkCard {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.artworkCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.artworkCard a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.artworkImageWrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.artworkImageWrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.artworkInfo {
+    padding: 15px;
+    text-align: center;
+}
+
+.artworkInfo h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.artworkInfo p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* ==== Artist Grid (Catalogs) ==== */
+.artworksContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.artCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.artCard img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.artCard img:hover {
+    transform: scale(1.05);
+}
+
+.artCard h2 {
+    color: #000;
+}
+
+
+/* ==== Related Artworks (Shared) ==== */
+.relatedArtworks {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.relatedArtworks h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.relatedContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.relatedItem {
+    width: 220px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.relatedItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.relatedItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.relatedItem h4 {
+    font-size: 16px;
+    margin: 8px 0 5px;
+    color: #222;
+}
+
+.relatedItem p {
+    font-size: 14px;
+    color: #555;
+}
+
+.relatedItem a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.relatedItem a:hover {
+    text-decoration: none; /* also remove underline on hover */
+    color: inherit;         /* keep the color consistent */
+}
+/* ==== Games Content ==== */
+
+.gameContent{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    border: 1px solid;
+}
+
+.gameOptions{
+    display: flex;
+    flex-direction: row;
+}
+
+#gameMenu button {
+    outline: none;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #ff6f61, #ff9966);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 16px rgba(255, 105, 97, 0.3);
+    transition: all 0.25s ease;
+  }
+  
+#gameMenu button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(255, 105, 97, 0.4);
+    cursor: pointer;
+  }
+
+/* ==== Upload Section ==== */
+.uploadContent {
+    background-color: rgba(190, 232, 237, 0.767);
+    padding: 10px;
+    color: #b08bcf;
+    gap: 20px;
+    align-items: center;
+}
+
+.uploadHeader {
+    font-size: 30px;
+    color: #b08bcf;
+}
+
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.uploadForm input[type="file"] {
+    border: none;
+}
+
+.uploadForm button {
+    border: none;
+    width: 50%;
+    padding: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.uploadForm button:hover {
+    color: red;
+    background-color: #b08bcf;
+}
+
+.uploadResult {
+    margin: auto;
+}
+
+/* ==== Spinner ==== */
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==== Pagination ==== */
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+}
+
+.pagination li a,
+.pagination li span {
+    display: block;
+    padding: 8px 14px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination li a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.pagination .active span {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination .disabled span {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ==== Responsive Navigation ==== */
+.menu-icon-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.hide-mobile {
+    display: none !important;
+}
+
+#openIcon {
+    display: none;
+}
+
+@media (max-width: 980px) {
+    #openIcon {
+        display: block;
+        position: static;
+    }
+
+    .nav-control {
+        flex-direction: row;
+    }
+
+    .nav-bar {
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 300px;
+        background-color: #b49bca;
+        backdrop-filter: blur(4px);
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+        padding: 40px 20px;
+        z-index: 9999;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform 0.65s ease-in-out;
+        box-shadow: 100px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        transform: translateX(0%);
+    }
+
+    .nav-close-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-icon-mobile {
+        display: block;
+    }
+
+    .nav-box a {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-box a:hover {
+        color: #000000;
+        border-bottom: 2px solid rgb(54, 156, 41);
+    }
+}

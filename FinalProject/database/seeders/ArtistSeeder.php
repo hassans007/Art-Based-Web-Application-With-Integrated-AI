@@ -1,0 +1,148 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
+
+class ArtistSeeder extends Seeder
+{
+    public function run(): void
+    {
+        DB::table('artists')->insert([
+            [
+                'name' => 'Pablo Picasso',
+                'birth_year' => 1881,
+                'death_year' => 1973,
+                'famous_for' => 'Guernica',
+                'nationality' => 'Spanish',
+                'biography' => 'Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and stage designer, one of the most influential artists of the 20th century.',
+                'profile_image' => URL::asset('images/artists/picasso.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Vincent van Gogh',
+                'birth_year' => 1853,
+                'death_year' => 1890,
+                'famous_for' => 'Starry Night',
+                'nationality' => 'Dutch',
+                'biography' => 'Van Gogh was a Dutch post-impressionist painter who created about 2,100 artworks, including around 860 oil paintings.',
+                'profile_image' => URL::asset('images/artists/Vincent.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Leonardo da Vinci',
+                'birth_year' => 1452,
+                'death_year' => 1519,
+                'famous_for' => 'Mona Lisa',
+                'nationality' => 'Italian',
+                'biography' => 'Leonardo da Vinci was a polymath of the Italian Renaissance whose areas of interest included invention, painting, sculpting, and architecture.',
+                'profile_image' => URL::asset('images/artists/daVinci.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Claude Monet',
+                'birth_year' => 1840,
+                'death_year' => 1926,
+                'famous_for' => 'Water Lilies',
+                'nationality' => 'French',
+                'biography' => 'Claude Monet was a founder of French Impressionist painting, and his consistent and prolific practice of painting outdoors was central to its philosophy.',
+                'profile_image' => URL::asset('images/artists/ClaudeMonet.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Salvador Dalí',
+                'birth_year' => 1904,
+                'death_year' => 1989,
+                'famous_for' => 'The Persistence of Memory',
+                'nationality' => 'Spanish',
+                'biography' => 'Salvador Dalí was a Spanish surrealist artist known for his eccentric behavior and striking and bizarre images.',
+                'profile_image' => URL::asset('images/artists/SalvadorDali.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Frida Kahlo',
+                'birth_year' => 1907,
+                'death_year' => 1954,
+                'famous_for' => 'The Two Fridas',
+                'nationality' => 'Mexican',
+                'biography' => 'Frida Kahlo was a Mexican painter known for her many portraits, self-portraits, and works inspired by nature and artifacts of Mexico.',
+                'profile_image' => URL::asset('images/artists/FridaKahlo.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Andy Warhol',
+                'birth_year' => 1928,
+                'death_year' => 1987,
+                'famous_for' => 'Campbell\'s Soup Cans',
+                'nationality' => 'American',
+                'biography' => 'Andy Warhol was an American artist, film director, and producer who was a leading figure in the visual art movement known as pop art.',
+                'profile_image' => URL::asset('images/artists/AndyWarhol.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Michelangelo',
+                'birth_year' => 1475,
+                'death_year' => 1564,
+                'famous_for' => 'The Creation of Adam',
+                'nationality' => 'Italian',
+                'biography' => 'Michelangelo was an Italian sculptor, painter, architect and poet of the High Renaissance who exerted an unparalleled influence on the development of Western art.',
+                'profile_image' => URL::asset('images/artists/Michelangelo.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Georgia O\'Keeffe',
+                'birth_year' => 1887,
+                'death_year' => 1986,
+                'famous_for' => 'Red Canna',
+                'nationality' => 'American',
+                'biography' => 'Georgia O\'Keeffe was an American modernist artist known for her paintings of enlarged flowers, New York skyscrapers, and New Mexico landscapes.',
+                'profile_image' => URL::asset('images/artists/Georgia-Keeffe.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Henri Matisse',
+                'birth_year' => 1869,
+                'death_year' => 1954,
+                'famous_for' => 'The Dance',
+                'nationality' => 'French',
+                'biography' => 'Henri Matisse was a French artist, known for both his use of color and his fluid and original draughtsmanship.',
+                'profile_image' => URL::asset('images/artists/HenriMatisse.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Jackson Pollock',
+                'birth_year' => 1912,
+                'death_year' => 1956,
+                'famous_for' => 'Number 1A',
+                'nationality' => 'American',
+                'biography' => 'Jackson Pollock was an American painter and a major figure in the abstract expressionist movement.',
+                'profile_image' => URL::asset('images/artists/jackson-pollock.jpg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Rembrandt van Rijn',
+                'birth_year' => 1606,
+                'death_year' => 1669,
+                'famous_for' => 'The Night Watch',
+                'nationality' => 'Dutch',
+                'biography' => 'Rembrandt was a Dutch draughtsman, painter, and printmaker, generally considered one of the greatest visual artists in the history of art.',
+                'profile_image' => URL::asset('images/artists/Rembrandt.jpeg'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}
